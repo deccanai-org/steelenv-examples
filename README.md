@@ -22,6 +22,8 @@ Requirement-table tiers (L0/L1) use 0.5 mm for positions and outlines (1 mm for 
 
 **21.8%**Qwen3.8-27B, 8 calls; 30.0% at 32
 
+**New:** [H3 + H4 hard-tier leaderboard](https://deccanai-org.github.io/steelenv-examples/leaderboard/) — the two hardest tiers (119 + 96 tasks, b=32, 2 repeats). All three frontier models scored 0% full credit on both tiers; the page reports the honest zeros alongside builds-ok, cost and runtime.
+
 Headline leaderboard for benchmark v1.3 (results/leaderboard.md): mean full-credit rate over two runs. The tables below recompute these figures from the result files and match them.
 
 ### Benchmark fixes in v1.3

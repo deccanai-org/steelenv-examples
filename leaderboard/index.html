@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SteelEnv H3+H4 Leaderboard</title>
+<meta name="description" content="Agent leaderboard for the hardest SteelEnv tiers (H3, H4). 3 frontier models, 2 repeats each, b=32 budget.">
+<style>
+  :root {
+    --fg: #1f2328;
+    --muted: #57606a;
+    --bg: #ffffff;
+    --surface: #f6f8fa;
+    --border: #d0d7de;
+    --accent: #157878; /* cayman teal */
+    --accent-weak: #e6f4f1;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+  html, body {
+    background: var(--bg);
+    color: var(--fg);
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  main {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 32px 20px 72px;
+  }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 14px;
+    margin-bottom: 24px;
+  }
+  h1 { font-size: 1.9rem; margin: 0 0 6px; }
+  h2 { font-size: 1.25rem; margin: 32px 0 10px; border-bottom: 1px solid var(--border); padding-bottom: 4px; }
+  h3 { font-size: 1.05rem; margin: 20px 0 8px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  p.lede { color: var(--muted); margin: 2px 0 0; }
+  .note {
+    background: var(--accent-weak);
+    border-left: 3px solid var(--accent);
+    padding: 10px 14px;
+    margin: 14px 0 24px;
+    font-size: 0.95rem;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8px 0 18px;
+    font-variant-numeric: tabular-nums;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: right;
+  }
+  th {
+    background: var(--surface);
+    font-weight: 600;
+    text-align: center;
+  }
+  th:first-child, td:first-child { text-align: left; }
+  td.model { font-weight: 600; }
+  td.n { color: var(--muted); font-size: 0.9rem; }
+  .lead { background: #fff8c5; }   /* yellow highlight on the top cell */
+  .zero { color: var(--muted); }
+  .callout {
+    margin-top: 36px;
+    padding: 16px 18px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+  }
+  .callout h3 { margin-top: 0; }
+  code { font-family: var(--mono); background: var(--surface); padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
+  .meta { color: var(--muted); font-size: 0.85rem; margin-top: 48px; border-top: 1px solid var(--border); padding-top: 10px; }
+  caption { caption-side: bottom; color: var(--muted); font-size: 0.85rem; text-align: left; padding-top: 6px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>SteelEnv H3+H4 Leaderboard</h1>
+    <p class="lede">Agent benchmark on the two hardest SteelEnv tiers. 3 frontier models &times; 2 tiers &times; 2 repeats, 32-call budget.</p>
+  </header>
+
+  <p>
+    SteelEnv tests whether an agent can turn a fabrication shop drawing into
+    a buildable CadQuery solid, graded against the shop&rsquo;s NC1 file.
+    The main-set tiers (L0&ndash;L5) are published elsewhere;
+    this page reports the <strong>H3</strong> and <strong>H4</strong> hard tiers only.
+    H1/H2 and L0&ndash;L5 numbers are pending and will be added to this page as they land.
+  </p>
+
+  <div class="note">
+    <strong>Headline:</strong> on H3 and H4 every frontier model we tried scored
+    <strong>0% full credit</strong> and <strong>0% builds-ok</strong> across both repeats.
+    These two tiers are open headroom; no model in this batch cleared the gate.
+    Numbers below are reported as measured.
+  </div>
+
+  <h2>H3 &mdash; 119 tasks</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>model</th>
+        <th>pass@1</th>
+        <th>pass@2</th>
+        <th>builds-ok</th>
+        <th>avg reward</th>
+        <th>avg API calls</th>
+        <th>avg seconds</th>
+        <th>$ / task</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="model">Claude Opus 5.5</td>
+        <td class="zero">0.0%</td>
+        <td class="zero">0.0%</td>
+        <td class="zero">0.0%</td>
+        <td class="zero">0.000</td>
+        <td>6.5</td>
+        <td>19.7</td>
+        <td>$0.0865</td>
+      </tr>
+      <tr>
+        <td class="model">GPT-6 Astra</td>
+        <td class="zero">0.0%</td>
+        <td class="zero">0.0%</td>
+        <td class="zero">0.0%</td>
+        <td class="zero">0.000</td>
+        <td>3.8</td>
+        <td>14.6</td>
+        <td>$0.0185</td>
+      </tr>
+      <tr>
+        <td class="model">Qwen3.8-27B</td>
+        <td class="zero">0.0%</td>
+        <td class="zero">0.0%</td>
+        <td class="zero">0.0%</td>
+        <td class="zero">0.000</td>
+        <td>25.9</td>
+        <td>250.5</td>
+        <td>$0.1146</td>
+      </tr>
+    </tbody>
+    <caption>
+      Each cell is 119 tasks &times; 2 repeats. pass@1 is the mean full-credit rate over the two repeats;
+      pass@2 counts a task as solved if either repeat earned full credit (reward = 1).
+      No cell cleared either threshold on H3.
+    </caption>
+  </table>
+
+  <h2>H4 &mdash; 96 tasks</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>model</th>
+        <th>pass@1</th>
+        <th>pass@2</th>
+        <th>builds-ok</th>
+        <th>avg reward</th>
+        <th>avg API calls</th>
+        <th>avg seconds</th>
+        <th>$ / task</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="model">Claude Opus 5.5</td>
+        <td class="zero">0.0%</td>
+        <td class="zero">0.0%</td>
+        <td class="zero">0.0%</td>
+        <td class="zero">0.000</td>
+        <td>6.8</td>
+        <td>20.6</td>
+        <td>$0.0902</td>
+      </tr>
+      <tr>
+        <td class="model">GPT-6 Astra</td>
+        <td class="zero">0.0%</td>
+        <td class="zero">0.0%</td>
+        <td class="zero">0.0%</td>
+        <td class="zero">0.000</td>
+        <td>3.9</td>
+        <td>15.2</td>
+        <td>$0.0192</td>
+      </tr>
+      <tr>
+        <td class="model">Qwen3.8-27B</td>
+        <td class="zero">0.0%</td>
+        <td class="zero">0.0%</td>
+        <td class="zero">0.0%</td>
+        <td class="zero">0.000</td>
+        <td>24.7</td>
+        <td>234.4</td>
+        <td>$0.1036</td>
+      </tr>
+    </tbody>
+    <caption>
+      H4 has 99 tasks in the frozen list but only <strong>96</strong> rows per repeat here:
+      3 tasks are silently skipped by all three models because of a data-bundle gap
+      (asset files missing from this build); they will return once the bundle is rebuilt.
+      Reporting /96 rather than /99 avoids inflating or deflating any model.
+    </caption>
+  </table>
+
+  <h2>Method</h2>
+  <ul>
+    <li><strong>Scoring.</strong> A task earns full credit only when the submitted solid passes all seven SteelEnv gates (thickness, outline bbox, outline shape, hole count, hole diameters, hole positions, volume). <code>pass@1</code> is the mean full-credit rate across the two repeats; <code>pass@2</code> counts a task as solved if at least one of the two repeats earned full credit. <code>builds-ok</code> is the share of rollouts where the submitted CadQuery program produced a single valid solid (the gate before any check runs).</li>
+    <li><strong>Budget.</strong> b=32 (up to 32 API tool calls per task), toolset v2, two independent repeats (r0, r1) per model &times; tier.</li>
+    <li><strong>Cost.</strong> Mean <code>input&times;p<sub>in</sub> + output&times;p<sub>out</sub></code> per task, using Claude Opus 5.5 at $15 / $75 per 1M tokens, GPT-6 Astra at $3 / $15 per 1M, and Qwen3.8-27B via OpenRouter at $0.60 / $3 per 1M. Reasoning / cached tokens are not re-priced here.</li>
+    <li><strong>Why zeros.</strong> H3 and H4 ship as the headroom tiers for the next model generation; these models were allowed to try the batch end to end, and the result is the honest zero above. Finer-grained diagnostics (which gate they fail, where the reasoning breaks down) are tracked in the paper, not on this page.</li>
+  </ul>
+
+  <div class="callout">
+    <h3>Submit your model</h3>
+    <p>
+      To submit your model&rsquo;s results, open a PR on
+      <a href="https://github.com/deccanai-org/steelenv-examples">github.com/deccanai-org/steelenv-examples</a>.
+      Include per-task JSONL rows in the same shape as the files behind this page
+      (<code>task_id</code>, <code>reward</code>, <code>gates.builds</code>, <code>turns</code>,
+      <code>api_calls</code>, <code>seconds</code>, <code>usage</code>).
+    </p>
+  </div>
+
+  <p class="meta">
+    <a href="../">&larr; back to the SteelEnv examples</a>
+    &middot;
+    Generated 2026-10-05 from <code>gs://mlproject-501205-gym-runs/eval/h3h4/</code>.
+  </p>
+</main>
+</body>
+</html>

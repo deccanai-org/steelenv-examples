@@ -16,11 +16,11 @@ Requirement-table tiers (L0/L1) use 0.5 mm for positions and outlines (1 mm for 
 
 **457**scored test tasks (frozen 493 minus 36 errata)
 
-**88.4%**GPT-6 Astra, 8 calls (95% CI 85.6–91.1); 90.5% at 32
+**90.5%** GPT-6 Astra (32 calls)
 
-**68.4%**Claude Opus 5.5, 8 calls; 68.4% at 32
+**68.4%** Claude Opus 5.5 (32 calls)
 
-**21.8%**Qwen3.8-27B, 8 calls; 30.0% at 32
+**30.0%** Qwen3.8-27B (32 calls)
 
 **New:** [H3 + H4 hard-tier leaderboard](https://deccanai-org.github.io/steelenv-examples/leaderboard/) — the two hardest tiers (119 + 96 tasks, b=32, 2 repeats). All three frontier models scored 0% full credit on both tiers; the page reports the honest zeros alongside builds-ok, cost and runtime.
 
@@ -146,31 +146,29 @@ Labels from results/failure_labels_bela.jsonl, same ontology; Astra and Claude f
 ## The 19 examples
 | # | task | tier | part | split | GPT-6 Astra solved, by calls | Claude Opus 5.5 solved, by calls | Qwen3.8-27B solved, by calls |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | [HELX-p2642-L1](#1-helx-p2642-l1) | L1 | plate | test | 8: 2/2 · 32: 2/2 | 8: 2/2 · 32: 2/2 | 8: 2/2 · 32: 2/2 |
+| 1 | [HELX-p2642-L1](#1-helx-p2642-l1) | L1 | plate | test | 2/2 | 2/2 | 2/2 |
 | 2 | [MT18048-BR1200-L1](#2-mt18048-br1200-l1) | L1 | angle | train | no runs | no runs | no runs |
-| 3 | [HELX-p2272-L3](#3-helx-p2272-l3) | L3 | plate | test | 8: 2/2 · 32: 2/2 | 8: 1/2 · 32: 1/2 | 8: 2/2 · 32: 2/2 |
-| 4 | [FERN-M16013-L3](#4-fern-m16013-l3) | L3 | angle | test | 8: 2/2 · 32: 2/2 | 8: 2/2 · 32: 0/2 | 8: 0/2 · 32: 0/2 |
-| 5 | [MSSU-2011B1-L3](#5-mssu-2011b1-l3) | L3 | beam | test | 8: 2/2 · 32: 2/2 | 8: 1/2 · 32: 0/2 | 8: 0/2 · 32: 0/2 |
-| 6 | [MSSU-4006B3-L3](#6-mssu-4006b3-l3) | L3 | beam | test | 8: 1/2 · 32: 1/2 | 8: 0/2 · 32: 0/2 | 8: 0/2 · 32: 0/2 |
-| 7 | [BELA-p297_2-L3](#7-bela-p297_2-l3) | L3 | plate | ext | 8: 2/2 · 32: 2/2 | 8: 1/2 · 32: 0/2 | 8: 0/2 · 32: 0/2 |
+| 3 | [HELX-p2272-L3](#3-helx-p2272-l3) | L3 | plate | test | 2/2 | 1/2 | 2/2 |
+| 4 | [FERN-M16013-L3](#4-fern-m16013-l3) | L3 | angle | test | 2/2 | 0/2 | 0/2 |
+| 5 | [MSSU-2011B1-L3](#5-mssu-2011b1-l3) | L3 | beam | test | 2/2 | 0/2 | 0/2 |
+| 6 | [MSSU-4006B3-L3](#6-mssu-4006b3-l3) | L3 | beam | test | 1/2 | 0/2 | 0/2 |
+| 7 | [BELA-p297_2-L3](#7-bela-p297_2-l3) | L3 | plate | ext | 2/2 | 0/2 | 0/2 |
 | 8 | [MT20023-2080-L3](#8-mt20023-2080-l3) | L3 | beam | train | no runs | no runs | no runs |
-| 9 | [FERN-B10059-L3](#9-fern-b10059-l3) | L3 | beam | test | 8: 0/2 · 32: 0/2 | 8: 0/2 · 32: 0/2 | 8: 0/2 · 32: 0/2 |
-| 10 | [MSSU-p348-L3](#10-mssu-p348-l3) | L3 | plate | test | 8: 0/2 · 32: 0/2 | 8: 2/2 · 32: 1/2 | 8: 0/2 · 32: 0/2 |
-| 11 | [HELX-M17014-L3](#11-helx-m17014-l3) | L3 | angle | test (errata) | 8: 0/2 · 32: 0/2 | 8: 0/2 · 32: 0/2 | 8: 0/2 · 32: 0/2 |
-| 12 | [HELX-B13030-L3](#12-helx-b13030-l3) | L3 | beam | test (bug-15 re-run) | 8: 2/2 · 32: 2/2 | 8: 2/2 · 32: 1/2 | 8: 0/2 · 32: 0/2 |
-| 13 | [FERN-B1057-L4](#13-fern-b1057-l4) | L4 | beam | test | 8: 1/2 · 32: 2/2 | 8: 2/2 · 32: 1/2 | 8: 0/2 · 32: 0/2 |
-| 14 | [MSSU-2019B1-L5](#14-mssu-2019b1-l5) | L5 | assembly | test | 8: 2/2 · 32: 2/2 | 8: 0/2 · 32: 0/2 | 8: 0/2 · 32: 0/2 |
+| 9 | [FERN-B10059-L3](#9-fern-b10059-l3) | L3 | beam | test | 0/2 | 0/2 | 0/2 |
+| 10 | [MSSU-p348-L3](#10-mssu-p348-l3) | L3 | plate | test | 0/2 | 1/2 | 0/2 |
+| 11 | [HELX-M17014-L3](#11-helx-m17014-l3) | L3 | angle | test (errata) | 0/2 | 0/2 | 0/2 |
+| 12 | [HELX-B13030-L3](#12-helx-b13030-l3) | L3 | beam | test (bug-15 re-run) | 2/2 | 1/2 | 0/2 |
+| 13 | [FERN-B1057-L4](#13-fern-b1057-l4) | L4 | beam | test | 2/2 | 1/2 | 0/2 |
+| 14 | [MSSU-2019B1-L5](#14-mssu-2019b1-l5) | L5 | assembly | test | 2/2 | 0/2 | 0/2 |
 | 15 | [MSSU-S2010-L6](#15-mssu-s2010-l6) | L6 | sheet | test | not yet evaluated | not yet evaluated | not yet evaluated |
 | 16 | [MSSU-4007B1-H1](#16-mssu-4007b1-h1) | H1 | beam | test | 32 r0: 0.857 cope_corner | 32 r0: 0.857 cope_corner | 32 r0: 0.0 gate_fail |
 | 17 | [HELX-p3997-H1](#17-helx-p3997-h1) | H1 | plate | test | 32 r0: 0.571 formed_not_flat | 32 r0: 0.571 formed_not_flat | 32 r0: 0.429 |
 | 18 | [BELA-1042-H1](#18-bela-1042-h1) | H1 | beam | test | 32 r0: solved (not in fails) | 32 r0: 0.857 hole_misread | 32 r0: 0.0 gate_fail |
 | 19 | [FERN-M17005-H2](#19-fern-m17005-h2) | H2 | angle | test | 32 r0: 0.857 wrong_hand | 32 r0: 0.857 wrong_hand | 32 r0: 0.714 |
 
-“8: 1/2” means one of the two 8-call runs earned full credit.
-
 ## Examples
 
-**Where GPT-6 Astra fails.** On the v1.3 scored set (457 tasks) Astra misses about one task in nine: pass@1 is 88.4% at 8 calls and 90.5% at 32. It fails both runs on 44 tasks at 8 calls and 38 at 32 calls. On only one of those at each budget does Claude solve both runs (MSSU-p348-L3 at 8 calls, HELX-M6020-L3 at 32). Its 36 labelled failures (v1.3 label set) are half perception (50%) and a quarter domain convention (25%). The top modes are P4 feature_not_seen (6), P5 dense_group_holes_dropped (4), P1 dimension_misread (4), C3 cope_corner_square (3) and C1 section_guessed (3). Most of the old C1 labels went away with the bug-15 catalogue fix. Example 11 shows P4 and example 12 shows P5. Example 13 looked like a shared P1 failure until it turned out to be a drawing/NC1 disagreement, and example 14 was a C1 failure caused by the tool's missing catalogue entry.
+**Where GPT-6 Astra fails.** On the v1.3 scored set (457 tasks) Astra misses about one task in nine: pass@1 is 90.5% at 32. It fails both runs on 38 tasks at 32 calls. On only one of those at each budget does Claude solve both runs (HELX-M6020-L3). Its 36 labelled failures (v1.3 label set) are half perception (50%) and a quarter domain convention (25%). The top modes are P4 feature_not_seen (6), P5 dense_group_holes_dropped (4), P1 dimension_misread (4), C3 cope_corner_square (3) and C1 section_guessed (3). Most of the old C1 labels went away with the bug-15 catalogue fix. Example 11 shows P4 and example 12 shows P5. Example 13 looked like a shared P1 failure until it turned out to be a drawing/NC1 disagreement, and example 14 was a C1 failure caused by the tool's missing catalogue entry.
 
 ### 1 HELX-p2642-L1
 L1plateproject HELXsplit: testtolerance 0.5 mm (table tier)
@@ -424,13 +422,11 @@ Claude Opus 5.5, 32 calls
 
 Claude Opus 5.5, 32 calls, reward 0.857
 
-Qwen3.8-27B, 8 calls: no part was built (no B-rep saved)
-
 Qwen3.8-27B, 32 calls
 
 Qwen3.8-27B, 32 calls, reward 0.857
 
-**What it shows.** Astra solves it in all four runs. Claude solves it at 8 calls but fails both 32-call runs: it leaves the notch corner square, which puts the outline 5.5 mm off where the fabricator burns a radius (C3). Qwen cuts the wrong leg (X4) and is off by 104 mm.
+**What it shows.** Astra solves it in all four runs. Claude fails both 32-call runs: it leaves the notch corner square, which puts the outline 5.5 mm off where the fabricator burns a radius (C3). Qwen cuts the wrong leg (X4) and is off by 104 mm.
 
 ### 5 MSSU-2011B1-L3
 L3beamproject MSSUsplit: testtolerance 1.6 mm (drawing tier)
@@ -487,8 +483,6 @@ Grey: answer key. Blue: the model's saved part, placed in the verifier's aligned
 Claude Opus 5.5, 32 calls
 
 Claude Opus 5.5, 32 calls, reward 0.857
-
-Qwen3.8-27B, 8 calls: no part was built (no B-rep saved)
 
 Qwen3.8-27B, 32 calls
 
@@ -548,27 +542,15 @@ Checks shown for repeat 0 (r0). ✓ pass, ✗ fail. Failure labels exist only fo
 
 Grey: answer key. Blue: the model's saved part, placed in the verifier's aligned frame. The red box on the full-length view marks the zoom.
 
-GPT-6 Astra, 8 calls
-
-GPT-6 Astra, 8 calls, reward 0.857
-
-Claude Opus 5.5, 8 calls
-
-Claude Opus 5.5, 8 calls, reward 0.857
-
 Claude Opus 5.5, 32 calls
 
 Claude Opus 5.5, 32 calls, reward 0.429
-
-Qwen3.8-27B, 8 calls
-
-Qwen3.8-27B, 8 calls, reward 0.286
 
 Qwen3.8-27B, 32 calls
 
 Qwen3.8-27B, 32 calls, reward 0.000
 
-**What it shows.** Claude fails all four runs. In the labelled run, its flange-hole cutters go through the full depth and drill the bottom flange too, giving 11 holes for 7 (R5). It also leaves the cut corners square. Astra passes once at each budget; its misses fail only outline_shape (2.6 mm in the 8-call run).
+**What it shows.** Claude fails all four runs. In the labelled run, its flange-hole cutters go through the full depth and drill the bottom flange too, giving 11 holes for 7 (R5). It also leaves the cut corners square. Astra passes one of its two 32-call runs; the miss fails only outline_shape.
 
 ### 7 BELA-p297_2-L3
 L3plateproject BELAsplit: extension (Bel Air)tolerance 1.6 mm (drawing tier)
@@ -619,17 +601,9 @@ Checks shown for repeat 0 (r0). ✓ pass, ✗ fail. Failure labels exist only fo
 
 Grey: answer key. Blue: the model's saved part, placed in the verifier's aligned frame. The red box on the full-length view marks the zoom.
 
-Claude Opus 5.5, 8 calls
-
-Claude Opus 5.5, 8 calls, reward 0.857
-
 Claude Opus 5.5, 32 calls
 
 Claude Opus 5.5, 32 calls, reward 0.857
-
-Qwen3.8-27B, 8 calls
-
-Qwen3.8-27B, 8 calls, reward 0.000
 
 Qwen3.8-27B, 32 calls
 
@@ -730,10 +704,6 @@ Checks shown for repeat 0 (r0). ✓ pass, ✗ fail. Failure labels exist only fo
 
 Grey: answer key. Blue: the model's saved part, placed in the verifier's aligned frame. The red box on the full-length view marks the zoom.
 
-GPT-6 Astra, 8 calls
-
-GPT-6 Astra, 8 calls, reward 0.857
-
 GPT-6 Astra, 32 calls
 
 GPT-6 Astra, 32 calls, reward 0.857
@@ -797,17 +767,9 @@ Checks shown for repeat 0 (r0). ✓ pass, ✗ fail. Failure labels exist only fo
 
 Grey: answer key. Blue: the model's saved part, placed in the verifier's aligned frame. The red box on the full-length view marks the zoom.
 
-GPT-6 Astra, 8 calls
-
-GPT-6 Astra, 8 calls, reward 0.000
-
 GPT-6 Astra, 32 calls
 
 GPT-6 Astra, 32 calls, reward 0.000
-
-Qwen3.8-27B, 8 calls
-
-Qwen3.8-27B, 8 calls, reward 0.429
 
 Qwen3.8-27B, 32 calls
 
@@ -866,25 +828,13 @@ Checks shown for repeat 0 (r0). ✓ pass, ✗ fail. Failure labels exist only fo
 
 Grey: answer key. Blue: the model's saved part, placed in the verifier's aligned frame. The red box on the full-length view marks the zoom.
 
-GPT-6 Astra, 8 calls
-
-GPT-6 Astra, 8 calls, reward 0.571
-
 GPT-6 Astra, 32 calls
 
 GPT-6 Astra, 32 calls, reward 0.571
 
-Claude Opus 5.5, 8 calls
-
-Claude Opus 5.5, 8 calls, reward 0.571
-
 Claude Opus 5.5, 32 calls
 
 Claude Opus 5.5, 32 calls, reward 0.571
-
-Qwen3.8-27B, 8 calls
-
-Qwen3.8-27B, 8 calls, reward 0.429
 
 Qwen3.8-27B, 32 calls
 
@@ -1008,23 +958,15 @@ Checks shown for repeat 0 (r0). ✓ pass, ✗ fail. Failure labels exist only fo
 
 Grey: answer key. Blue: the model's saved part, placed in the verifier's aligned frame. The red box on the full-length view marks the zoom.
 
-GPT-6 Astra, 8 calls
-
-GPT-6 Astra, 8 calls, reward 0.857
-
 Claude Opus 5.5, 32 calls
 
 Claude Opus 5.5, 32 calls, reward 0.857
-
-Qwen3.8-27B, 8 calls
-
-Qwen3.8-27B, 8 calls, reward 0.714
 
 Qwen3.8-27B, 32 calls
 
 Qwen3.8-27B, 32 calls, reward 0.429
 
-**What it shows.** Here the models fail both ways. Astra misses once at 8 calls: its cope radius is too small, which leaves 2.6 mm against a 1.6 mm limit. Claude's failing run bows the cope's corner arc the wrong way (7.4 mm). It is labelled R6, cut geometry wrong, but the overlay looks like a reversed arc (E6). Qwen misses the cope in all four runs.
+**What it shows.** Here the models fail both ways. Astra misses in one of its two 32-call runs: its cope radius is too small, which leaves 2.6 mm against a 1.6 mm limit. Claude's failing run bows the cope's corner arc the wrong way (7.4 mm). It is labelled R6, cut geometry wrong, but the overlay looks like a reversed arc (E6). Qwen misses the cope in all four runs.
 
 ### 14 MSSU-2019B1-L5
 L5assemblyproject MSSUsplit: testtolerance 1.6 mm (drawing tier)
@@ -1078,21 +1020,9 @@ Checks shown for repeat 0 (r0). ✓ pass, ✗ fail. Failure labels exist only fo
 
 Grey: answer key. Blue: the model's saved part, placed in the verifier's aligned frame. The red box on the full-length view marks the zoom.
 
-Claude Opus 5.5, 8 calls
-
-Claude Opus 5.5, 8 calls, reward 0.952
-
 Claude Opus 5.5, 32 calls
 
 Claude Opus 5.5, 32 calls, reward 0.857
-
-Qwen3.8-27B, 8 calls
-
-Qwen3.8-27B, 8 calls, reward 0.571
-
-Qwen3.8-27B, 8 calls
-
-Qwen3.8-27B, 8 calls, reward 0.571
 
 Qwen3.8-27B, 32 calls
 

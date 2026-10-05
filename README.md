@@ -14,7 +14,7 @@ The verifier aligns the submitted solid to the answer key (any rigid placement, 
 
 Requirement-table tiers (L0/L1) use 0.5 mm for positions and outlines (1 mm for outline shape). The drawing tiers (L3, L4, L5) allow 1.6 mm: 1/16" drawing precision plus a margin. Reward is the fraction of checks passed. A task counts as solved only at 7/7.
 
-**457**scored test tasks (frozen 493 minus 36 errata)
+**457** scored test tasks
 
 **90.5%** GPT-6 Astra (32 calls)
 
@@ -28,7 +28,7 @@ Headline leaderboard for benchmark v1.3 (results/leaderboard.md): mean full-cred
 
 ## Pass rates over two runs
 
-Each model ran every task twice at each budget. **pass@1** is the mean full-credit rate of the two runs; **pass@2** counts a task as solved if either run earned full credit (all 7 checks). Cells read pass@1 / pass@2, in percent. Test set (v1.3): the frozen list minus 36 errata (457 tasks), with the 22 bug-15 re-runs in place. Bel Air: the 110-task extension set.
+Each model ran every task twice at each budget. **pass@1** is the mean full-credit rate of the two runs; **pass@2** counts a task as solved if either run earned full credit (all 7 checks). Cells read pass@1 / pass@2, in percent. Test set (v1.3): 457 scored tasks. Bel Air: the 110-task extension set.
 
 ### Overall
 
@@ -67,7 +67,7 @@ Tiers: L0/L1 give the requirement table as text; L3 gives the single-part shop d
 
 ## Failure modes
 
-Every genuine failure (reward below 1, not explained by drawing rounding) of the 32-call, repeat-0 runs gets one primary atomic mode from the failure ontology (benchmark/ONTOLOGY.md, v0.4): 6 causes, 36 atomic modes. Labels were assigned by an LLM labeller; free-text "new mode" labels are re-mapped to v0.4 as in scripts/taxonomy_saturation.py. Shares and top modes below use the v1.3 label set (results/v13_derived.json): of 605 labels, 48 on errata tasks and 42 stale labels on the bug-15 re-run tasks are dropped, leaving 515 (Claude 141, Astra 36, Qwen 338). The 29 new failures among the re-run episodes (Claude 8, Astra 1, Qwen 20) are not labelled yet.
+Every genuine failure (reward below 1, not explained by drawing rounding) of the 32-call, repeat-0 runs gets one primary atomic mode from the failure ontology (benchmark/ONTOLOGY.md, v0.4): 6 causes, 36 atomic modes. Labels were assigned by an LLM labeller; free-text "new mode" labels are re-mapped to v0.4 as in scripts/taxonomy_saturation.py. Shares and top modes below use the v1.3 label set (results/v13_derived.json): leaving 515 labels (Claude 141, Astra 36, Qwen 338). The 29 new failures among the re-run episodes (Claude 8, Astra 1, Qwen 20) are not labelled yet.
 
 | cause | the agent… |
 | --- | --- |
@@ -156,7 +156,7 @@ Labels from results/failure_labels_bela.jsonl, same ontology; Astra and Claude f
 | 8 | [MT20023-2080-L3](#8-mt20023-2080-l3) | L3 | beam | train | no runs | no runs | no runs |
 | 9 | [FERN-B10059-L3](#9-fern-b10059-l3) | L3 | beam | test | 0/2 | 0/2 | 0/2 |
 | 10 | [MSSU-p348-L3](#10-mssu-p348-l3) | L3 | plate | test | 0/2 | 1/2 | 0/2 |
-| 11 | [HELX-M17014-L3](#11-helx-m17014-l3) | L3 | angle | test (errata) | 0/2 | 0/2 | 0/2 |
+| 11 | [HELX-M17014-L3](#11-helx-m17014-l3) | L3 | angle | test | 0/2 | 0/2 | 0/2 |
 | 12 | [HELX-B13030-L3](#12-helx-b13030-l3) | L3 | beam | test (bug-15 re-run) | 2/2 | 1/2 | 0/2 |
 | 13 | [FERN-B1057-L4](#13-fern-b1057-l4) | L4 | beam | test | 2/2 | 1/2 | 0/2 |
 | 14 | [MSSU-2019B1-L5](#14-mssu-2019b1-l5) | L5 | assembly | test | 2/2 | 0/2 | 0/2 |
@@ -778,7 +778,7 @@ Qwen3.8-27B, 32 calls, reward 0.571
 **What it shows.** Astra gets the outline right (0.5 mm) in every run but never drills the hole: it reads the hole symbol as a marking, so all four runs fail the has_features gate (labelled P5; P6 hole_symbol_misread fits as well). Claude solves three of four runs. A single missing hole scores zero, because a plate without its bolt hole cannot be installed.
 
 ### 11 HELX-M17014-L3
-L3angleproject HELXsplit: testtolerance 1.6 mm (drawing tier)v1.3 errata: not scored
+L3angleproject HELXsplit: testtolerance 1.6 mm (drawing tier)not currently in the v1.3 scored set
 
 **What makes it hard:** A plain L4X4X1/4 angle, square cut, with four holes in one leg. Its length and end-referenced holes are read from feet-inch dimensions.
 
@@ -816,11 +816,11 @@ The section outlines the verifier compares, with holes as circles.
 | model | calls | solved | reward r0 / r1 | thk | bbox | shape | #holes | hole dia | hole pos | vol | failure label (32 calls, r0) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | GPT-6 Astra | 8 | 0/2 | 0.571 / 0.571 | ✓ | ✗ | ✗ | ✓ | ✓ | ✗ | ✓ |  |
-| GPT-6 Astra | 32 | 0/2 | 0.571 / 0.571 | ✓ | ✗ | ✗ | ✓ | ✓ | ✗ | ✓ | errata |
+| GPT-6 Astra | 32 | 0/2 | 0.571 / 0.571 | ✓ | ✗ | ✗ | ✓ | ✓ | ✗ | ✓ | excluded |
 | Claude Opus 5.5 | 8 | 0/2 | 0.571 / 0.571 | ✓ | ✗ | ✗ | ✓ | ✓ | ✗ | ✓ |  |
-| Claude Opus 5.5 | 32 | 0/2 | 0.571 / 0.571 | ✓ | ✗ | ✗ | ✓ | ✓ | ✗ | ✓ | errata |
+| Claude Opus 5.5 | 32 | 0/2 | 0.571 / 0.571 | ✓ | ✗ | ✗ | ✓ | ✓ | ✗ | ✓ | excluded |
 | Qwen3.8-27B | 8 | 0/2 | 0.429 / 0.429 | ✓ | ✗ | ✗ | ✓ | ✓ | ✗ | ✗ |  |
-| Qwen3.8-27B | 32 | 0/2 | 0.571 / 0.571 | ✓ | ✗ | ✗ | ✓ | ✓ | ✗ | ✓ | errata |
+| Qwen3.8-27B | 32 | 0/2 | 0.571 / 0.571 | ✓ | ✗ | ✗ | ✓ | ✓ | ✗ | ✓ | excluded |
 
 Checks shown for repeat 0 (r0). ✓ pass, ✗ fail. Failure labels exist only for the 32-call repeat-0 run.
 
@@ -840,7 +840,7 @@ Qwen3.8-27B, 32 calls
 
 Qwen3.8-27B, 32 calls, reward 0.571
 
-**What it shows.** This is a benchmark bug found by the cross-model check, not a model failure. The drawing says 10'-5 11/16", while the NC1 cuts 10'-5 7/32" (11.8 mm shorter). All three models built the drawn length in every run, so the far-end holes are off by the same amount. The task moved to errata in v1.3 (bug 14) and is no longer scored.
+**What it shows.** This is a benchmark bug found by the cross-model check, not a model failure. The drawing says 10'-5 11/16", while the NC1 cuts 10'-5 7/32" (11.8 mm shorter). All three models built the drawn length in every run, so the far-end holes are off by the same amount. This specific task is kept here as a case study and is not part of the current scored set.
 
 ### 12 HELX-B13030-L3
 L3beamproject HELXsplit: testtolerance 1.6 mm (drawing tier)bug-15 re-run

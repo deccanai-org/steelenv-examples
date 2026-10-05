@@ -34,33 +34,24 @@ Each model ran every task twice at each budget. **pass@1** is the mean full-cred
 
 | model | calls | test (n=457) | Bel Air (n=110) |
 | --- | --- | --- | --- |
-| GPT-6 Astra | 8 | 88.4/90.4 | 98.2/98.2 |
 | GPT-6 Astra | 32 | 90.5/91.7 | 97.7/98.2 |
-| Claude Opus 5.5 | 8 | 68.4/72.4 | 97.7/99.1 |
 | Claude Opus 5.5 | 32 | 68.4/73.7 | 96.8/97.3 |
-| Qwen3.8-27B | 8 | 21.8/29.1 | 47.3/60.0 |
 | Qwen3.8-27B | 32 | 30.0/37.6 | 55.0/65.5 |
 
 ### By tier
 
 | model | calls | L0+L1 (n=49) | L3 (n=250) | L4 (n=114) | L5 (n=44) |
 | --- | --- | --- | --- | --- | --- |
-| GPT-6 Astra | 8 | 100.0/100.0 | 88.6/90.0 | 89.5/91.2 | 71.6/79.5 |
 | GPT-6 Astra | 32 | 100.0/100.0 | 89.6/90.8 | 91.2/92.1 | 83.0/86.4 |
-| Claude Opus 5.5 | 8 | 100.0/100.0 | 65.8/71.2 | 69.7/73.7 | 44.3/45.5 |
 | Claude Opus 5.5 | 32 | 99.0/100.0 | 65.2/70.4 | 71.1/78.1 | 45.5/52.3 |
-| Qwen3.8-27B | 8 | 86.7/95.9 | 18.0/26.8 | 4.8/7.9 | 14.8/22.7 |
 | Qwen3.8-27B | 32 | 94.9/100.0 | 26.2/35.6 | 12.7/16.7 | 23.9/34.1 |
 
 ### By part type
 
 | model | calls | plate (n=138) | angle (n=59) | beam (n=216) | L5 assembly (n=44) |
 | --- | --- | --- | --- | --- | --- |
-| GPT-6 Astra | 8 | 93.5/93.5 | 93.2/93.2 | 87.3/89.8 | 71.6/79.5 |
 | GPT-6 Astra | 32 | 93.5/94.9 | 93.2/93.2 | 89.4/90.3 | 83.0/86.4 |
-| Claude Opus 5.5 | 8 | 86.6/90.6 | 78.8/83.1 | 58.8/63.4 | 44.3/45.5 |
 | Claude Opus 5.5 | 32 | 86.6/89.1 | 74.6/76.3 | 59.7/67.6 | 45.5/52.3 |
-| Qwen3.8-27B | 8 | 43.5/56.5 | 32.2/45.8 | 6.5/8.3 | 14.8/22.7 |
 | Qwen3.8-27B | 32 | 58.0/69.6 | 41.5/49.2 | 10.2/14.8 | 23.9/34.1 |
 
 Tiers: L0/L1 give the requirement table as text; L3 gives the single-part shop drawing; L4 gives a sheet with several pieces and asks for one; L5 asks for every piece on an assembly sheet. Part type comes from the frozen list; L5 tasks are listed as assemblies. Re-running the bug-13 Qwen episodes changed Qwen's rates by at most 0.3 points.
@@ -232,11 +223,8 @@ The section outlines the verifier compares, with holes as circles.
 
 | model | calls | solved | reward r0 / r1 | thk | bbox | shape | #holes | hole dia | hole pos | vol | failure label (32 calls, r0) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| GPT-6 Astra | 8 | 2/2 | 1 / 1 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | GPT-6 Astra | 32 | 2/2 | 1 / 1 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | – |
-| Claude Opus 5.5 | 8 | 2/2 | 1 / 1 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | Claude Opus 5.5 | 32 | 2/2 | 1 / 1 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | – |
-| Qwen3.8-27B | 8 | 2/2 | 1 / 1 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | Qwen3.8-27B | 32 | 2/2 | 1 / 1 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | – |
 
 Checks shown for repeat 0 (r0). ✓ pass, ✗ fail. Failure labels exist only for the 32-call repeat-0 run.
@@ -348,11 +336,8 @@ The section outlines the verifier compares, with holes as circles.
 
 | model | calls | solved | reward r0 / r1 | thk | bbox | shape | #holes | hole dia | hole pos | vol | failure label (32 calls, r0) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| GPT-6 Astra | 8 | 2/2 | 1 / 1 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | GPT-6 Astra | 32 | 2/2 | 1 / 1 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | – |
-| Claude Opus 5.5 | 8 | 1/2 | 1 / 0.857 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | Claude Opus 5.5 | 32 | 1/2 | 0.857 / 1 | ✓ | ✓ | ✓ | ✓ | ✗ | ✓ | ✓ | P3 hole_diameter_misread |
-| Qwen3.8-27B | 8 | 2/2 | 1 / 1 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | Qwen3.8-27B | 32 | 2/2 | 1 / 1 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | – |
 
 Checks shown for repeat 0 (r0). ✓ pass, ✗ fail. Failure labels exist only for the 32-call repeat-0 run.
@@ -405,11 +390,8 @@ The section outlines the verifier compares, with holes as circles.
 
 | model | calls | solved | reward r0 / r1 | thk | bbox | shape | #holes | hole dia | hole pos | vol | failure label (32 calls, r0) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| GPT-6 Astra | 8 | 2/2 | 1 / 1 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | GPT-6 Astra | 32 | 2/2 | 1 / 1 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | – |
-| Claude Opus 5.5 | 8 | 2/2 | 1 / 1 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | Claude Opus 5.5 | 32 | 0/2 | 0.857 / 0.857 | ✓ | ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | C3 cope_corner_square |
-| Qwen3.8-27B | 8 | 0/2 | 0 / 0 | r0: gate failed (builds), no checks scored |  |  |  |  |  |  |  |
 | Qwen3.8-27B | 32 | 0/2 | 0.857 / 0.714 | ✓ | ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | X4 cut_on_wrong_flange |
 
 Checks shown for repeat 0 (r0). ✓ pass, ✗ fail. Failure labels exist only for the 32-call repeat-0 run.
@@ -467,11 +449,8 @@ The section outlines the verifier compares, with holes as circles.
 
 | model | calls | solved | reward r0 / r1 | thk | bbox | shape | #holes | hole dia | hole pos | vol | failure label (32 calls, r0) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| GPT-6 Astra | 8 | 2/2 | 1 / 1 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | GPT-6 Astra | 32 | 2/2 | 1 / 1 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | – |
-| Claude Opus 5.5 | 8 | 1/2 | 1 / 0.857 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | Claude Opus 5.5 | 32 | 0/2 | 0.857 / 0.857 | ✓ | ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | C3 cope_corner_square |
-| Qwen3.8-27B | 8 | 0/2 | 0 / 0.429 | r0: gate failed (builds), no checks scored |  |  |  |  |  |  |  |
 | Qwen3.8-27B | 32 | 0/2 | 0 / 0.714 | r0: gate failed (no_blind_holes), no checks scored | E1 blind_hole |  |  |  |  |  |  |
 
 Checks shown for repeat 0 (r0). ✓ pass, ✗ fail. Failure labels exist only for the 32-call repeat-0 run.
@@ -529,11 +508,8 @@ The section outlines the verifier compares, with holes as circles.
 
 | model | calls | solved | reward r0 / r1 | thk | bbox | shape | #holes | hole dia | hole pos | vol | failure label (32 calls, r0) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| GPT-6 Astra | 8 | 1/2 | 0.857 / 1 | ✓ | ✓ | ✗ | ✓ | ✓ | ✓ | ✓ |  |
 | GPT-6 Astra | 32 | 1/2 | 1 / 0.857 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | – |
-| Claude Opus 5.5 | 8 | 0/2 | 0.857 / 0.714 | ✓ | ✓ | ✗ | ✓ | ✓ | ✓ | ✓ |  |
 | Claude Opus 5.5 | 32 | 0/2 | 0.429 / 0.857 | ✓ | ✓ | ✗ | ✗ | ✗ | ✗ | ✓ | R5 extra_holes |
-| Qwen3.8-27B | 8 | 0/2 | 0.286 / 0.429 | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ | ✓ |  |
 | Qwen3.8-27B | 32 | 0/2 | 0 / 0.286 | r0: gate failed (no_blind_holes), no checks scored | E1 blind_hole |  |  |  |  |  |  |
 
 Checks shown for repeat 0 (r0). ✓ pass, ✗ fail. Failure labels exist only for the 32-call repeat-0 run.
@@ -588,11 +564,8 @@ The section outlines the verifier compares, with holes as circles.
 
 | model | calls | solved | reward r0 / r1 | thk | bbox | shape | #holes | hole dia | hole pos | vol | failure label (32 calls, r0) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| GPT-6 Astra | 8 | 2/2 | 1 / 1 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | GPT-6 Astra | 32 | 2/2 | 1 / 1 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | – |
-| Claude Opus 5.5 | 8 | 1/2 | 0.857 / 1 | ✓ | ✓ | ✗ | ✓ | ✓ | ✓ | ✓ |  |
 | Claude Opus 5.5 | 32 | 0/2 | 0.857 / 0.857 | ✓ | ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | R6 cut_geometry_wrong |
-| Qwen3.8-27B | 8 | 0/2 | 0 / 0.714 | r0: gate failed (has_features), no checks scored |  |  |  |  |  |  |  |
 | Qwen3.8-27B | 32 | 0/2 | 0.571 / 0.571 | ✓ | ✓ | ✗ | ✓ | ✓ | ✗ | ✗ | P8 phantom_feature |
 
 Checks shown for repeat 0 (r0). ✓ pass, ✗ fail. Failure labels exist only for the 32-call repeat-0 run.
@@ -691,11 +664,8 @@ The section outlines the verifier compares, with holes as circles.
 
 | model | calls | solved | reward r0 / r1 | thk | bbox | shape | #holes | hole dia | hole pos | vol | failure label (32 calls, r0) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| GPT-6 Astra | 8 | 0/2 | 0.857 / 0.857 | ✓ | ✓ | ✗ | ✓ | ✓ | ✓ | ✓ |  |
 | GPT-6 Astra | 32 | 0/2 | 0.857 / 0.857 | ✓ | ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | P4 feature_not_seen |
-| Claude Opus 5.5 | 8 | 0/2 | 0.857 / 0.857 | ✓ | ✓ | ✗ | ✓ | ✓ | ✓ | ✓ |  |
 | Claude Opus 5.5 | 32 | 0/2 | 0.857 / 0.857 | ✓ | ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | P4 feature_not_seen |
-| Qwen3.8-27B | 8 | 0/2 | 0 / 0.714 | r0: gate failed (builds), no checks scored |  |  |  |  |  |  |  |
 | Qwen3.8-27B | 32 | 0/2 | 0.857 / 0.571 | ✓ | ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | P4 feature_not_seen |
 
 Checks shown for repeat 0 (r0). ✓ pass, ✗ fail. Failure labels exist only for the 32-call repeat-0 run.
@@ -754,11 +724,8 @@ The section outlines the verifier compares, with holes as circles.
 
 | model | calls | solved | reward r0 / r1 | thk | bbox | shape | #holes | hole dia | hole pos | vol | failure label (32 calls, r0) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| GPT-6 Astra | 8 | 0/2 | 0 / 0 | r0: gate failed (has_features), no checks scored |  |  |  |  |  |  |  |
 | GPT-6 Astra | 32 | 0/2 | 0 / 0 | r0: gate failed (has_features), no checks scored | P5 dense_group_holes_dropped |  |  |  |  |  |  |
-| Claude Opus 5.5 | 8 | 2/2 | 1 / 1 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | Claude Opus 5.5 | 32 | 1/2 | 1 / 0 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | – |
-| Qwen3.8-27B | 8 | 0/2 | 0.429 / 0.571 | ✓ | ✓ | ✗ | ✓ | ✗ | ✗ | ✗ |  |
 | Qwen3.8-27B | 32 | 0/2 | 0.571 / 0 | ✓ | ✓ | ✗ | ✓ | ✓ | ✗ | ✗ | P4 feature_not_seen |
 
 Checks shown for repeat 0 (r0). ✓ pass, ✗ fail. Failure labels exist only for the 32-call repeat-0 run.
@@ -815,11 +782,8 @@ The section outlines the verifier compares, with holes as circles.
 
 | model | calls | solved | reward r0 / r1 | thk | bbox | shape | #holes | hole dia | hole pos | vol | failure label (32 calls, r0) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| GPT-6 Astra | 8 | 0/2 | 0.571 / 0.571 | ✓ | ✗ | ✗ | ✓ | ✓ | ✗ | ✓ |  |
 | GPT-6 Astra | 32 | 0/2 | 0.571 / 0.571 | ✓ | ✗ | ✗ | ✓ | ✓ | ✗ | ✓ | excluded |
-| Claude Opus 5.5 | 8 | 0/2 | 0.571 / 0.571 | ✓ | ✗ | ✗ | ✓ | ✓ | ✗ | ✓ |  |
 | Claude Opus 5.5 | 32 | 0/2 | 0.571 / 0.571 | ✓ | ✗ | ✗ | ✓ | ✓ | ✗ | ✓ | excluded |
-| Qwen3.8-27B | 8 | 0/2 | 0.429 / 0.429 | ✓ | ✗ | ✗ | ✓ | ✓ | ✗ | ✗ |  |
 | Qwen3.8-27B | 32 | 0/2 | 0.571 / 0.571 | ✓ | ✗ | ✗ | ✓ | ✓ | ✗ | ✓ | excluded |
 
 Checks shown for repeat 0 (r0). ✓ pass, ✗ fail. Failure labels exist only for the 32-call repeat-0 run.
@@ -881,11 +845,8 @@ The section outlines the verifier compares, with holes as circles.
 
 | model | calls | solved | reward r0 / r1 | thk | bbox | shape | #holes | hole dia | hole pos | vol | failure label (32 calls, r0) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| GPT-6 Astra | 8 | 2/2 | 1 / 1 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | GPT-6 Astra | 32 | 2/2 | 1 / 1 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | – |
-| Claude Opus 5.5 | 8 | 2/2 | 1 / 1 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | Claude Opus 5.5 | 32 | 1/2 | 0.857 / 1 | ✓ | ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | unlabelled (bug-15 re-run) |
-| Qwen3.8-27B | 8 | 0/2 | 0 / 0 | r0: gate failed (builds), no checks scored |  |  |  |  |  |  |  |
 | Qwen3.8-27B | 32 | 0/2 | 0.714 / 0.714 | ✓ | ✓ | ✗ | ✓ | ✓ | ✗ | ✓ | unlabelled (bug-15 re-run) |
 
 Checks shown for repeat 0 (r0). ✓ pass, ✗ fail. Failure labels exist only for the 32-call repeat-0 run.
@@ -945,11 +906,8 @@ The section outlines the verifier compares, with holes as circles.
 
 | model | calls | solved | reward r0 / r1 | thk | bbox | shape | #holes | hole dia | hole pos | vol | failure label (32 calls, r0) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| GPT-6 Astra | 8 | 1/2 | 0.857 / 1 | ✓ | ✓ | ✗ | ✓ | ✓ | ✓ | ✓ |  |
 | GPT-6 Astra | 32 | 2/2 | 1 / 1 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | – |
-| Claude Opus 5.5 | 8 | 2/2 | 1 / 1 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | Claude Opus 5.5 | 32 | 1/2 | 0.857 / 1 | ✓ | ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | R6 cut_geometry_wrong |
-| Qwen3.8-27B | 8 | 0/2 | 0.714 / 0.143 | ✓ | ✓ | ✗ | ✓ | ✓ | ✗ | ✓ |  |
 | Qwen3.8-27B | 32 | 0/2 | 0.429 / 0.714 | ✓ | ✓ | ✗ | ✗ | ✗ | ✗ | ✓ | P4 feature_not_seen |
 
 Checks shown for repeat 0 (r0). ✓ pass, ✗ fail. Failure labels exist only for the 32-call repeat-0 run.
@@ -1007,11 +965,8 @@ The section outlines the verifier compares, with holes as circles.
 
 | model | calls | solved | reward r0 / r1 | 2019b1 | a96 | p340 | count | failure label (32 calls, r0) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| GPT-6 Astra | 8 | 2/2 | 1 / 1 | ✓ | ✓ | ✓ | ✓ |  |
 | GPT-6 Astra | 32 | 2/2 | 1 / 1 | ✓ | ✓ | ✓ | ✓ | – |
-| Claude Opus 5.5 | 8 | 0/2 | 0.952 / 0.952 | ✗ | ✓ | ✓ | ✓ |  |
 | Claude Opus 5.5 | 32 | 0/2 | 0.857 / 0.952 | ✗ | ✓ | ✓ | ✓ | P1 dimension_misread |
-| Qwen3.8-27B | 8 | 0/2 | 0.571 / 0 | ✗ | ✓ | ✗ | ✓ |  |
 | Qwen3.8-27B | 32 | 0/2 | 0.714 / 0.714 | ✗ | ✗ | ✗ | ✓ | X4 cut_on_wrong_flange |
 
 Checks shown for repeat 0 (r0). ✓ pass, ✗ fail. Failure labels exist only for the 32-call repeat-0 run.

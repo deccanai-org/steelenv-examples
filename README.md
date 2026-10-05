@@ -155,24 +155,24 @@ Labels from results/failure_labels_bela.jsonl, same ontology; Astra and Claude f
 
 | # | task | tier | part | split | GPT-6 Astra solved, by calls | Claude Opus 5.5 solved, by calls | Qwen3.8-27B solved, by calls |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | [HELX-p2642-L1](#HELX-p2642-L1) | L1 | plate | test | 8: 2/2 · 32: 2/2 | 8: 2/2 · 32: 2/2 | 8: 2/2 · 32: 2/2 |
-| 2 | [HELX-p2272-L3](#HELX-p2272-L3) | L3 | plate | test | 8: 2/2 · 32: 2/2 | 8: 1/2 · 32: 1/2 | 8: 2/2 · 32: 2/2 |
-| 3 | [FERN-M16013-L3](#FERN-M16013-L3) | L3 | angle | test | 8: 2/2 · 32: 2/2 | 8: 2/2 · 32: 0/2 | 8: 0/2 · 32: 0/2 |
-| 4 | [MT18048-BR1200-L1](#MT18048-BR1200-L1) | L1 | angle | train | no runs | no runs | no runs |
-| 5 | [MSSU-2011B1-L3](#MSSU-2011B1-L3) | L3 | beam | test | 8: 2/2 · 32: 2/2 | 8: 1/2 · 32: 0/2 | 8: 0/2 · 32: 0/2 |
-| 6 | [FERN-B1057-L4](#FERN-B1057-L4) | L4 | beam | test | 8: 1/2 · 32: 2/2 | 8: 2/2 · 32: 1/2 | 8: 0/2 · 32: 0/2 |
-| 7 | [MSSU-4006B3-L3](#MSSU-4006B3-L3) | L3 | beam | test | 8: 1/2 · 32: 1/2 | 8: 0/2 · 32: 0/2 | 8: 0/2 · 32: 0/2 |
-| 8 | [MSSU-2019B1-L5](#MSSU-2019B1-L5) | L5 | assembly | test | 8: 2/2 · 32: 2/2 | 8: 0/2 · 32: 0/2 | 8: 0/2 · 32: 0/2 |
-| 9 | [BELA-p297_2-L3](#BELA-p297_2-L3) | L3 | plate | ext | 8: 2/2 · 32: 2/2 | 8: 1/2 · 32: 0/2 | 8: 0/2 · 32: 0/2 |
-| 10 | [MT20023-2080-L3](#MT20023-2080-L3) | L3 | beam | train | no runs | no runs | no runs |
-| 11 | [FERN-B10059-L3](#FERN-B10059-L3) | L3 | beam | test | 8: 0/2 · 32: 0/2 | 8: 0/2 · 32: 0/2 | 8: 0/2 · 32: 0/2 |
-| 12 | [MSSU-p348-L3](#MSSU-p348-L3) | L3 | plate | test | 8: 0/2 · 32: 0/2 | 8: 2/2 · 32: 1/2 | 8: 0/2 · 32: 0/2 |
-| 13 | [HELX-M17014-L3](#HELX-M17014-L3) | L3 | angle | test (errata) | 8: 0/2 · 32: 0/2 | 8: 0/2 · 32: 0/2 | 8: 0/2 · 32: 0/2 |
-| 14 | [HELX-B13030-L3](#HELX-B13030-L3) | L3 | beam | test (bug-15 re-run) | 8: 2/2 · 32: 2/2 | 8: 2/2 · 32: 1/2 | 8: 0/2 · 32: 0/2 |
-| 15 | [FERN-M17005-H2](#FERN-M17005-H2) | H2 | angle | test | 32 r0: 0.857 wrong_hand | 32 r0: 0.857 wrong_hand | 32 r0: 0.714 |
-| 16 | [MSSU-4007B1-H1](#MSSU-4007B1-H1) | H1 | beam | test | 32 r0: 0.857 cope_corner | 32 r0: 0.857 cope_corner | 32 r0: 0.0 gate_fail |
-| 17 | [HELX-p3997-H1](#HELX-p3997-H1) | H1 | plate | test | 32 r0: 0.571 formed_not_flat | 32 r0: 0.571 formed_not_flat | 32 r0: 0.429 |
-| 18 | [BELA-1042-H1](#BELA-1042-H1) | H1 | beam | test | 32 r0: solved (not in fails) | 32 r0: 0.857 hole_misread | 32 r0: 0.0 gate_fail |
+| 1 | [HELX-p2642-L1](#1-helx-p2642-l1) | L1 | plate | test | 8: 2/2 · 32: 2/2 | 8: 2/2 · 32: 2/2 | 8: 2/2 · 32: 2/2 |
+| 2 | [HELX-p2272-L3](#2-helx-p2272-l3) | L3 | plate | test | 8: 2/2 · 32: 2/2 | 8: 1/2 · 32: 1/2 | 8: 2/2 · 32: 2/2 |
+| 3 | [FERN-M16013-L3](#3-fern-m16013-l3) | L3 | angle | test | 8: 2/2 · 32: 2/2 | 8: 2/2 · 32: 0/2 | 8: 0/2 · 32: 0/2 |
+| 4 | [MT18048-BR1200-L1](#4-mt18048-br1200-l1) | L1 | angle | train | no runs | no runs | no runs |
+| 5 | [MSSU-2011B1-L3](#5-mssu-2011b1-l3) | L3 | beam | test | 8: 2/2 · 32: 2/2 | 8: 1/2 · 32: 0/2 | 8: 0/2 · 32: 0/2 |
+| 6 | [FERN-B1057-L4](#6-fern-b1057-l4) | L4 | beam | test | 8: 1/2 · 32: 2/2 | 8: 2/2 · 32: 1/2 | 8: 0/2 · 32: 0/2 |
+| 7 | [MSSU-4006B3-L3](#7-mssu-4006b3-l3) | L3 | beam | test | 8: 1/2 · 32: 1/2 | 8: 0/2 · 32: 0/2 | 8: 0/2 · 32: 0/2 |
+| 8 | [MSSU-2019B1-L5](#8-mssu-2019b1-l5) | L5 | assembly | test | 8: 2/2 · 32: 2/2 | 8: 0/2 · 32: 0/2 | 8: 0/2 · 32: 0/2 |
+| 9 | [BELA-p297_2-L3](#9-bela-p297_2-l3) | L3 | plate | ext | 8: 2/2 · 32: 2/2 | 8: 1/2 · 32: 0/2 | 8: 0/2 · 32: 0/2 |
+| 10 | [MT20023-2080-L3](#10-mt20023-2080-l3) | L3 | beam | train | no runs | no runs | no runs |
+| 11 | [FERN-B10059-L3](#11-fern-b10059-l3) | L3 | beam | test | 8: 0/2 · 32: 0/2 | 8: 0/2 · 32: 0/2 | 8: 0/2 · 32: 0/2 |
+| 12 | [MSSU-p348-L3](#12-mssu-p348-l3) | L3 | plate | test | 8: 0/2 · 32: 0/2 | 8: 2/2 · 32: 1/2 | 8: 0/2 · 32: 0/2 |
+| 13 | [HELX-M17014-L3](#13-helx-m17014-l3) | L3 | angle | test (errata) | 8: 0/2 · 32: 0/2 | 8: 0/2 · 32: 0/2 | 8: 0/2 · 32: 0/2 |
+| 14 | [HELX-B13030-L3](#14-helx-b13030-l3) | L3 | beam | test (bug-15 re-run) | 8: 2/2 · 32: 2/2 | 8: 2/2 · 32: 1/2 | 8: 0/2 · 32: 0/2 |
+| 15 | [FERN-M17005-H2](#15-fern-m17005-h2) | H2 | angle | test | 32 r0: 0.857 wrong_hand | 32 r0: 0.857 wrong_hand | 32 r0: 0.714 |
+| 16 | [MSSU-4007B1-H1](#16-mssu-4007b1-h1) | H1 | beam | test | 32 r0: 0.857 cope_corner | 32 r0: 0.857 cope_corner | 32 r0: 0.0 gate_fail |
+| 17 | [HELX-p3997-H1](#17-helx-p3997-h1) | H1 | plate | test | 32 r0: 0.571 formed_not_flat | 32 r0: 0.571 formed_not_flat | 32 r0: 0.429 |
+| 18 | [BELA-1042-H1](#18-bela-1042-h1) | H1 | beam | test | 32 r0: solved (not in fails) | 32 r0: 0.857 hole_misread | 32 r0: 0.0 gate_fail |
 
 “8: 1/2” means one of the two 8-call runs earned full credit.
 
@@ -180,7 +180,7 @@ Labels from results/failure_labels_bela.jsonl, same ontology; Astra and Claude f
 
 **Where GPT-6 Astra fails.** On the v1.3 scored set (457 tasks) Astra misses about one task in nine: pass@1 is 88.4% at 8 calls and 90.5% at 32. It fails both runs on 44 tasks at 8 calls and 38 at 32 calls. On only one of those at each budget does Claude solve both runs (MSSU-p348-L3 at 8 calls, HELX-M6020-L3 at 32). Its 36 labelled failures (v1.3 label set) are half perception (50%) and a quarter domain convention (25%). The top modes are P4 feature_not_seen (6), P5 dense_group_holes_dropped (4), P1 dimension_misread (4), C3 cope_corner_square (3) and C1 section_guessed (3). Most of the old C1 labels went away with the bug-15 catalogue fix. Example 11 shows P4 and example 12 shows P5. Example 13 looked like a shared P1 failure until it turned out to be a drawing/NC1 disagreement, and example 14 was a C1 failure caused by the tool's missing catalogue entry.
 
-### 1 HELX-p2642-L1 {#HELX-p2642-L1}
+### 1 HELX-p2642-L1
 L1plateproject HELXsplit: testtolerance 0.5 mm (table tier)
 
 **What makes it hard:** Little is hard here: every number is in the requirement table. The outline has a clipped corner and the holes are off-grid, and the table tier allows only 0.5 mm.
@@ -253,7 +253,7 @@ Checks shown for repeat 0 (r0). ✓ pass, ✗ fail. Failure labels exist only fo
 
 **What it shows.** This is the baseline. With the dimensions given as text, all three models solve it in all 12 runs, as they do every plate on the L1 test list. The difficulty at higher tiers comes from reading the drawing, not from CadQuery.
 
-### 2 HELX-p2272-L3 {#HELX-p2272-L3}
+### 2 HELX-p2272-L3
 L3plateproject HELXsplit: testtolerance 1.6 mm (drawing tier)
 
 **What makes it hard:** The same kind of plate as example 1 (PL1/4X6, clipped corner, two holes), but now read from the shop drawing in feet-inches.
@@ -308,7 +308,7 @@ Claude Opus 5.5, 32 calls, reward 0.857
 
 **What it shows.** Claude's failing run has the outline and both hole positions exactly right, but one hole is 23.81 mm (15/16") where the NC1 has 20.64 mm. Only the hole_diameters check fails, and a volume or IoU metric would barely notice. Qwen3.8-27B solves this one in all four runs.
 
-### 3 FERN-M16013-L3 {#FERN-M16013-L3}
+### 3 FERN-M16013-L3
 L3angleproject FERNsplit: testtolerance 1.6 mm (drawing tier)
 
 **What makes it hard:** An L5X5X3/8 angle with a notch cut out of leg B that has a radiused re-entrant corner. Leg A runs full length, so the model has to put the cut on the right leg.
@@ -371,7 +371,7 @@ Qwen3.8-27B, 32 calls, reward 0.857
 
 **What it shows.** Astra solves it in all four runs. Claude solves it at 8 calls but fails both 32-call runs: it leaves the notch corner square, which puts the outline 5.5 mm off where the fabricator burns a radius (C3). Qwen cuts the wrong leg (X4) and is off by 104 mm.
 
-### 4 MT18048-BR1200-L1 {#MT18048-BR1200-L1}
+### 4 MT18048-BR1200-L1
 L1angleproject MT18048split: traintolerance 0.5 mm (table tier)
 
 **What makes it hard:** An equal-leg angle (L4X4X1/4) with two hole groups at mirror-symmetric positions, four holes of 20.64 mm at one end and four of 23.81 mm at the other. Because the legs are equal, a rotated part lands every hole on a valid position.
@@ -440,7 +440,7 @@ No model results: this is a training-pool task, so it was never in a leaderboard
 
 **What it shows.** This is the case that exposed the hole-diameter bug. A part with the two sizes swapped end for end has the same sorted list of diameters, so the old check accepted it. The verifier now also compares the diameter at each position-matched pair, and rejects it. This is a training-pool task, so there are no model results.
 
-### 5 MSSU-2011B1-L3 {#MSSU-2011B1-L3}
+### 5 MSSU-2011B1-L3
 L3beamproject MSSUsplit: testtolerance 1.6 mm (drawing tier)
 
 **What makes it hard:** A W21X44 beam with copes at both ends, top and bottom. Each cope corner has a radius that the drawing shows rounded but does not dimension.
@@ -504,7 +504,7 @@ Qwen3.8-27B, 32 calls, reward 0.000
 
 **What it shows.** Astra solves it in all four runs. Claude's part is right everywhere except the cope corners, which it leaves square (5.3 mm deviation, C3). The shop would burn the radius, so the verifier rejects the part. Qwen drills a flange hole straight over the web, which leaves a blind hole and fails a gate.
 
-### 6 FERN-B1057-L4 {#FERN-B1057-L4}
+### 6 FERN-B1057-L4
 L4beamproject FERNsplit: testtolerance 1.6 mm (drawing tier)
 
 **What makes it hard:** A beam on a sheet that details several pieces. The model has to find this piece mark, ignore the fittings, and do it in 5 tool calls. It has one radiused end cope and two groups of web holes.
@@ -570,7 +570,7 @@ Qwen3.8-27B, 32 calls, reward 0.429
 
 **What it shows.** Here the models fail both ways. Astra misses once at 8 calls: its cope radius is too small, which leaves 2.6 mm against a 1.6 mm limit. Claude's failing run bows the cope's corner arc the wrong way (7.4 mm). It is labelled R6, cut geometry wrong, but the overlay looks like a reversed arc (E6). Qwen misses the cope in all four runs.
 
-### 7 MSSU-4006B3-L3 {#MSSU-4006B3-L3}
+### 7 MSSU-4006B3-L3
 L3beamproject MSSUsplit: testtolerance 1.6 mm (drawing tier)
 
 **What makes it hard:** A W12X40 beam with four holes in the top flange only, three web holes, and flange cuts with radiused corners.
@@ -644,7 +644,7 @@ Qwen3.8-27B, 32 calls, reward 0.000
 
 **What it shows.** Claude fails all four runs. In the labelled run, its flange-hole cutters go through the full depth and drill the bottom flange too, giving 11 holes for 7 (R5). It also leaves the cut corners square. Astra passes once at each budget; its misses fail only outline_shape (2.6 mm in the 8-call run).
 
-### 8 MSSU-2019B1-L5 {#MSSU-2019B1-L5}
+### 8 MSSU-2019B1-L5
 L5assemblyproject MSSUsplit: testtolerance 1.6 mm (drawing tier)
 
 **What makes it hard:** An assembly sheet: the model must build each of the three pieces as a separate solid, a W21X44 beam, an L4X4X1/4 angle and a 1/2" plate. Reward is the mean over the matched pieces.
@@ -726,7 +726,7 @@ Qwen3.8-27B, 32 calls, reward 0.714
 
 **What it shows.** Astra solves all four runs. Claude gets the angle and the plate right every time but never the beam. In the labelled run, the beam is 12.7 mm (1/2") too long and its end holes inherit the error (P1). One misread dimension costs the whole assembly.
 
-### 9 BELA-p297_2-L3 {#BELA-p297_2-L3}
+### 9 BELA-p297_2-L3
 L3plateproject BELAsplit: extension (Bel Air)tolerance 1.6 mm (drawing tier)
 
 **What makes it hard:** A Bel Air gusset plate with an 18-segment outline: a deep slot, two stepped notches with radiused corners, four chamfered corners, and three holes.
@@ -793,7 +793,7 @@ Qwen3.8-27B, 32 calls, reward 0.571
 
 **What it shows.** Astra solves it in all four runs. Claude models every feature, but its slot ends 11.1 mm short of the NC1 depth (R6), so it fails only outline_shape. Qwen builds a different outline altogether, with features the plate does not have (P8), and misplaces all three holes by tens of millimetres.
 
-### 10 MT20023-2080-L3 {#MT20023-2080-L3}
+### 10 MT20023-2080-L3
 L3beamproject MT20023split: traintolerance 1.6 mm (drawing tier)
 
 **What makes it hard:** A training-pool W14X22 beam with top and bottom copes at the start end, 10 web holes in three groups, and 3 top-flange holes. It is typical of the new MT-series training projects.
@@ -834,7 +834,7 @@ No model results: this is a training-pool task, so it was never in a leaderboard
 
 **What it shows.** There are no model results, because training-pool tasks are not in the leaderboard runs. It is here to show what the training data looks like: the same NC1 answer key and the same verifier as the test set.
 
-### 11 FERN-B10059-L3 {#FERN-B10059-L3}
+### 11 FERN-B10059-L3
 L3beamproject FERNsplit: testtolerance 1.6 mm (drawing tier)
 
 **What makes it hard:** A W16X26 beam whose top flange has six U-shaped notches with radiused bottoms, cut into one flange edge in three pairs along the length. The web holes are routine.
@@ -904,7 +904,7 @@ Qwen3.8-27B, 32 calls, reward 0.857
 
 **What it shows.** Astra fails all four runs, and so do Claude and Qwen. Every model builds a plain W16X26 with the web holes right but leaves out the flange notches, which puts the outline 25.4 mm off (P4 feature_not_seen for all three). This is Astra's most common labelled mode after v1.3: a feature on the drawing that never makes it into the model.
 
-### 12 MSSU-p348-L3 {#MSSU-p348-L3}
+### 12 MSSU-p348-L3
 L3plateproject MSSUsplit: testtolerance 1.6 mm (drawing tier)
 
 **What makes it hard:** A thick plate (PL1X13) detailed as one piece on a multi-piece assembly sheet, with a clipped outline and a single hole.
@@ -971,7 +971,7 @@ Qwen3.8-27B, 32 calls, reward 0.571
 
 **What it shows.** Astra gets the outline right (0.5 mm) in every run but never drills the hole: it reads the hole symbol as a marking, so all four runs fail the has_features gate (labelled P5; P6 hole_symbol_misread fits as well). Claude solves three of four runs. A single missing hole scores zero, because a plate without its bolt hole cannot be installed.
 
-### 13 HELX-M17014-L3 {#HELX-M17014-L3}
+### 13 HELX-M17014-L3
 L3angleproject HELXsplit: testtolerance 1.6 mm (drawing tier)v1.3 errata: not scored
 
 **What makes it hard:** A plain L4X4X1/4 angle, square cut, with four holes in one leg. Its length and end-referenced holes are read from feet-inch dimensions.
@@ -1048,7 +1048,7 @@ Qwen3.8-27B, 32 calls, reward 0.571
 
 **What it shows.** This is a benchmark bug found by the cross-model check, not a model failure. The drawing says 10'-5 11/16", while the NC1 cuts 10'-5 7/32" (11.8 mm shorter). All three models built the drawn length in every run, so the far-end holes are off by the same amount. The task moved to errata in v1.3 (bug 14) and is no longer scored.
 
-### 14 HELX-B13030-L3 {#HELX-B13030-L3}
+### 14 HELX-B13030-L3
 L3beamproject HELXsplit: testtolerance 1.6 mm (drawing tier)bug-15 re-run
 
 **What makes it hard:** A light W12X14 beam with copes. Before v1.3 the section was missing from the lookup_shape catalogue, so agents had to guess the flange and web thicknesses.
@@ -1115,7 +1115,7 @@ Before the fix (episode now in results/leaderboard_pre_bug15/): GPT-6 Astra's 32
 **What it shows.** Astra failed only because the tool's catalogue lacked W12X14 (bug 15). Before the fix it built the rounded drawing thicknesses (6.35 mm flange, 4.76 mm web) against the catalogue 5.71 mm and 5.08 mm, and failed only the thickness check in all four runs (cross-section below). With the fixed catalogue it solves 4/4. Claude now solves 3/4; its one miss is a square cope corner (5.3 mm, not labelled yet). The new failures on re-run tasks have no labels yet.
 
 Built from the SteelEnv repository's task prompts, answer-key specs, verifier results and failure labels. Renders are generated from geometry; no shop-drawing content is reproduced.
-### 15 FERN-M17005-H2 {#FERN-M17005-H2}
+### 15 FERN-M17005-H2
 H2 · angle · project FERN · split: test · tolerance 1.6 mm (drawing tier)
 
 **What makes it hard (H2).** H2 removes the "do not mirror" convention from the prompt. On this piece every one of the three evaluated models still fails the mirror check — the submission's mirror image is correct. §8's C5 wrong_hand mode (6 of 7 C5 labels in H1/H2 are H2-only) is the signature of this stripped convention: in H1 Astra solves the same piece (not in the failures table), in H2 it builds the angle on the mirror hand.
@@ -1156,7 +1156,7 @@ H1 counterpart (FERN-M17005-H1, same piece with the "do not mirror" clause): Ast
 
 **What it shows.** The paper's claim that stripping prompt conventions in H2 flips mode distributions — "Astra's angles fall from 88% in H1 to 31% in H2, every failing H2 angle episode fails the outline check, and 13 of Astra's H2 failures (all angles, none in H1) are the wrong hand" — made concrete on one piece. Dimensions, holes and cope all agree with the key, so the sole mistake is picking the opposite hand.
 
-### 16 MSSU-4007B1-H1 {#MSSU-4007B1-H1}
+### 16 MSSU-4007B1-H1
 H1 · beam · project MSSU · split: test · tolerance 1.6 mm (drawing tier)
 
 **What makes it hard (H1).** H1 keeps the frame conventions but is a harder piece pool than main-set L3/L4. On this W12X40 both frontier models leave the cope corners square (C3) — Claude's #1 failure mode across the H1/H2 label set (54 of 141 primary labels), and the convention that §7 estimates explains about two-thirds of Claude's main-set gap to Astra. Qwen fails the no-blind-holes gate — never produces a scorable part.
@@ -1205,7 +1205,7 @@ Grey: answer key (NC1 spec). Blue: the model's saved part, placed in the verifie
 
 **What it shows.** Both frontier models write the correct beam, read the holes right, and get within 5.3 mm of the outline — the exact signature of a square inside right-angle cope corner that the fabricator cuts with a ½" (12.7 mm) tangent radius. §8's "unwritten shop standards" audit shows 99.2% of H-section cope corners in the NC1 corpus are rounded to that radius; the drawing never states it. Qwen in contrast fails the gate — Qwen's H1 beam column scores 3.5% in the paper, and this piece lands in the 96.5% of failures.
 
-### 17 HELX-p3997-H1 {#HELX-p3997-H1}
+### 17 HELX-p3997-H1
 H1 · plate · project HELX · split: test · tolerance 1.6 mm (drawing tier)
 
 **What makes it hard (H1).** This plate is drawn in its formed (bent) shape on the shop drawing, but the NC1 answer key is the flat developed blank cut from PL1/4X15 1/4 (3048 × 386.82 × 6.35 mm) that gets bent downstream. All three models model the bent geometry instead of unfolding it: they extrude a formed section ~158.75 mm thick (one leg length) and ~241.3 mm wide (the other), missing the bill-of-material "15 1/4"" developed width. This is the new mode §8 proposes for ontology v0.5 — C7 formed_plate_not_developed — and all three H1 unclassified labels in the paper share this mechanism (all on Astra's H1 bent plates).
@@ -1245,7 +1245,7 @@ Labelled under the proposed C7 mode (`formed_plate_not_developed` / `bent_plate_
 
 **What it shows.** A convention that is domain-obvious to a fit-up shop but invisible on the drawing: the NC1 cuts a flat blank that is bent later. Every tested model falls into the same trap, so this is not a model-ranking signal but an evidence item for v0.5 of the ontology. Astra's H1 bent plates are where all three paper-cited unclassified labels came from.
 
-### 18 BELA-1042-H1 {#BELA-1042-H1}
+### 18 BELA-1042-H1
 H1 · beam · project BELA · split: test · tolerance 1.6 mm (drawing tier)
 
 **What makes it hard (H1 Qwen-only).** W10X54, 14960.6 mm long with 10 holes split evenly between top and bottom flange faces (5 on 'o', 5 on 'u'). Claude solves to 0.857 reward (one hole off by 12.7 mm). Astra does not appear in the H1 failures table for this piece, meaning it earned full credit. Qwen fails the no-blind-holes gate — this is a Qwen-floor case the paper flags for the 3.5% H1 pass rate.

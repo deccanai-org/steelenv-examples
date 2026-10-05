@@ -26,16 +26,6 @@ Requirement-table tiers (L0/L1) use 0.5 mm for positions and outlines (1 mm for 
 
 Headline leaderboard for benchmark v1.3 (results/leaderboard.md): mean full-credit rate over two runs. The tables below recompute these figures from the result files and match them.
 
-### Benchmark fixes in v1.3
-
-- **Bug 11:** hole diameters were compared as sorted lists, so swapping sizes between symmetric positions passed. Matched pairs are now compared too (example 4).
-- **Bug 12:** a tolerance race in parallel grading could grade part of a drawing-tier episode at table-tier tolerance. Fixed with a lock.
-- **Bug 13:** measuring all features crashed on unmeasurable parts. The affected episodes were re-run.
-- **Bug 14:** on nine drawings the printed length disagrees with the NC1, and all three models built the drawn length in every run. These tasks moved to errata (example 13).
-- **Bug 15:** the lookup_shape section catalogue was missing or wrong for 22 test tasks. They were re-run for all models (example 14).
-
-Errata now number 36, which leaves 457 scored test tasks.
-
 ## Pass rates over two runs
 
 Each model ran every task twice at each budget. **pass@1** is the mean full-credit rate of the two runs; **pass@2** counts a task as solved if either run earned full credit (all 7 checks). Cells read pass@1 / pass@2, in percent. Test set (v1.3): the frozen list minus 36 errata (457 tasks), with the 22 bug-15 re-runs in place. Bel Air: the 110-task extension set.
